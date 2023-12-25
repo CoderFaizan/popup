@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button type="button" class="btn" id="btn" onclick="show()" >Submit</button>
+        <div class="popup" id="popup">
+            <img src="tick.png" alt="">
+            <h2 id="alert">Thank You!</h2>
+            <p id="para">Your Details Has Been Submited</p>
+                <button type="button" id="closebtn"  onclick="closePopUp()" id="okbtn">Ok</button>
+        </div>
+    
+    </div>
+</body>
+</html>
+
+<script>
+//     var btn = document.getElementById("btn");
+//     let popup  = document.getElementById('popup');
+//    btn.addEventListener('click',function(){
+//         popup.classList.add('open-popup');
+//     });
+ 
+function show(s,p){
+    document.getElementById('popup').classList.remove('close-popup');
+  var alert = document.getElementById("alert").innerText=s;
+  var para = document.getElementById("para").innerText=p;
+  let popup  = document.getElementById('popup');
+  setTimeout(function(){
+      popup.classList.add('open-popup');
+  },100);
+  setTimeout(function(){
+              popup.classList.remove('open-popup');
+              popup.classList.add('close-popup');
+          },3500)
+ }
+</script>
